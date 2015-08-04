@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="260.0" maxWidth="400.0" prefHeight="248.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.openthinks.vimixer.ui.controller.ConfigurePaneController">
+   <children>
+      <TextField fx:id="nameField" layoutX="121.0" layoutY="14.0" prefHeight="23.0" prefWidth="180.0" />
+      <Label layoutX="14.0" layoutY="18.0" text="%label.name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="54.0" text="%label.secret_key" />
+      <Label layoutX="14.0" layoutY="95.0" text="%label.segment_type" />
+      <PasswordField fx:id="secretField" layoutX="121.0" layoutY="50.0" prefHeight="23.0" prefWidth="180.0" />
+      <ComboBox fx:id="typeCombox" layoutX="121.0" layoutY="91.0" prefHeight="23.0" prefWidth="180.0" />
+      <Label layoutX="14.0" layoutY="143.0" text="%label.segment_space" />
+      <Label layoutX="14.0" layoutY="183.0" text="%label.segment_length" />
+      <Slider fx:id="spaceSlider" blockIncrement="1.0" layoutX="118.0" layoutY="145.0" majorTickUnit="10.0" min="1.0" minorTickCount="1" prefHeight="14.0" prefWidth="180.0" showTickMarks="true" value="3.0" />
+      <Slider fx:id="lengthSlider" blockIncrement="1.0" layoutX="121.0" layoutY="184.0" majorTickUnit="32.0" max="256.0" min="32.0" minorTickCount="1" prefHeight="14.0" prefWidth="180.0" showTickMarks="true" snapToTicks="true" value="32.0" />
+      <Label fx:id="lengthValuelabel" layoutX="316.0" layoutY="183.0" text="Label" />
+      <Label fx:id="spaceValueLabel" layoutX="316.0" layoutY="145.0" text="Label" />
+      <PasswordField fx:id="secretStoredField" disable="true" layoutX="125.0" layoutY="211.0" prefHeight="23.0" prefWidth="180.0" />
+   </children>
+</AnchorPane>
