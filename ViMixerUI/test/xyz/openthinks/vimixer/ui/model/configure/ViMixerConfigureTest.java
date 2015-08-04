@@ -6,6 +6,11 @@ import java.io.FileNotFoundException;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.PropertyException;
 
+import openthinks.vimixer.ui.model.configure.Segmentor;
+import openthinks.vimixer.ui.model.configure.SimpleLinearSegmentor;
+import openthinks.vimixer.ui.model.configure.SmartLinearSegmentor;
+import openthinks.vimixer.ui.model.configure.ViMixerConfigure;
+
 public class ViMixerConfigureTest {
 	
 	public void testMarshaller() throws PropertyException, FileNotFoundException, JAXBException{
