@@ -4,7 +4,7 @@
 		<path id="fxant">
 			<filelist>
 				<file name="C:\Program Files\Java\jdk1.8.0_51\lib\ant-javafx.jar"/>
-				<file name="C:\Program Files\Java\jre1.8.0_51\lib\ext\jfxrt.jar"/>
+				<file name="${java.home}\lib\ext\jfxrt.jar"/>
 				<file name="${basedir}"/>
 			</filelist>
 		</path>
@@ -21,32 +21,27 @@
 		<mkdir dir="externalLibs" />
 	
 		<copy todir="externalLibs">
-			<fileset dir="R:\MyGit\openlib\ViMixerUI\lib">
-				<filename name="openlibs.i18n.jar"/>
+			<fileset dir="R:\MyGit\ViMixer\ViMixerUI\lib">
+				<filename name="openlibs.i18n-v1.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="R:\MyGit\ViMixer\ViMixerUI\lib">
+				<filename name="openlibs.utilities-v1.0.jar"/>
 			</fileset>
 		</copy>
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="R:\MyGit\openlib\ViMixerUI">
-				<include name="test/**" />
-			</fileset>
-		</copy>
-		<copy todir="project">
-			<fileset dir="R:\MyGit\openlib\ViMixerUI">
+			<fileset dir="R:\MyGit\ViMixer\ViMixerUI">
 				<include name="src/**" />
 			</fileset>
 		</copy>
 	
 		<mkdir dir="projectRefs" />
 		<copy todir="projectRefs">
-			<fileset dir="R:\MyGit\openlib">
-				<include name="ViMixer\test/**" />
-			</fileset>
-		</copy>
-		<copy todir="projectRefs">
-			<fileset dir="R:\MyGit\openlib">
-				<include name="ViMixer\src/**" />
+			<fileset dir="R:\MyGit\ViMixer">
+				<include name="ViMixerLib\src/**" />
 			</fileset>
 		</copy>
 	</target>
@@ -59,28 +54,19 @@
 		<!-- Copy project-libs references -->
 		<copy todir="build/libs">
 			<fileset dir="externalLibs">
-				<include name="openlibs.i18n.jar"/>
+				<include name="openlibs.i18n-v1.0.jar"/>
+				<include name="openlibs.utilities-v1.0.jar"/>
 			</fileset>
 		</copy>
 	
 		<!-- Copy project references -->
 		<copy todir="build/src">
-			<fileset dir="projectRefs/ViMixer/test">
-				<include name="**/*"/>
-			</fileset>
-		</copy>
-		<copy todir="build/src">
-			<fileset dir="projectRefs/ViMixer/src">
+			<fileset dir="projectRefs/ViMixerLib/src">
 				<include name="**/*"/>
 			</fileset>
 		</copy>
 	
 		<!-- Copy project sources itself -->
-		<copy todir="build/src">
-			<fileset dir="project/test">
-				<include name="**/*"/>
-			</fileset>
-		</copy>
 		<copy todir="build/src">
 			<fileset dir="project/src">
 				<include name="**/*"/>
@@ -97,21 +83,13 @@
 	
 		<!-- Copy over none Java-Files -->
 		<copy todir="build/classes">
-		<fileset dir="project/test">
-			<exclude name="**/*.java"/>
-		</fileset>
 		<fileset dir="project/src">
 			<exclude name="**/*.java"/>
 		</fileset>
 		</copy>
 	
 		<copy todir="build/classes">
-			<fileset dir="projectRefs/ViMixer/test">
-				<exclude name="**/*.java"/>
-			</fileset>
-		</copy>
-		<copy todir="build/classes">
-			<fileset dir="projectRefs/ViMixer/src">
+			<fileset dir="projectRefs/ViMixerLib/src">
 				<exclude name="**/*.java"/>
 			</fileset>
 		</copy>
@@ -138,8 +116,9 @@
 	
 		<fx:application id="fxApplication"
 			name="ViMixerApp"
-			mainClass="xyz.openthinks.vimixer.ViMixerApp"
+			mainClass="openthinks.vimixer.ViMixerApp"
 			toolkit="fx"
+			version="1.0"
 		/>
 	
 		<mkdir dir="build/classes/META-INF" />
@@ -153,7 +132,7 @@
 			<fx:resources refid="appRes"/>
 	
 			<manifest>
-				<attribute name="Implementation-Vendor" value="dailey.yet@outlook.com"/>
+				<attribute name="Implementation-Vendor" value="dailey.dai"/>
 				<attribute name="Implementation-Title" value="ViMixerApp"/>
 				<attribute name="Implementation-Version" value="1.0"/>
 				<attribute name="JavaFX-Feature-Proxy" value="None"/>
@@ -172,8 +151,8 @@
 			outfile="ViMixerUI" nativeBundles="exe"
 			updatemode="background" >
 	
-			<fx:platform basedir="C:\Program Files\Java\jdk1.8.0_51"/>
-			<fx:info title="ViMixerUI" vendor="dailey.yet@outlook.com"/>
+			<fx:platform basedir="${java.home}"/>
+			<fx:info title="ViMixerUI" vendor="dailey.dai"/>
 	
 			<fx:application refId="fxApplication"/>
 			<fx:resources refid="appRes"/>

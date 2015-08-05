@@ -23,7 +23,7 @@ public class ResourceLoader {
 		FXML_CONFIGUREPANE = ResourceLoader.class.getResource("/openthinks/vimixer/ui/view/ConfigurePane.fxml");
 		// app icon and css style
 		CSS_APP = ResourceLoader.class.getResource("/openthinks/vimixer/ui/view/application.css");
-		APP_ICON = new Image(ResourceLoader.class.getResourceAsStream("vimixer_4.png"));
+		APP_ICON = new Image(ResourceLoader.class.getResourceAsStream("ViMixerApp.png"));
 
 	}
 }
