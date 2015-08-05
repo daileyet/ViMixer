@@ -10,7 +10,10 @@ The lib for encrypting files(image,video etc.) by [AES][1].
 # ViMixerUI
 
 The UI for encrypting image and video files by configuration XML file.
+
 There are two types configuration, one is smart and another is simaple.
+
+BTW, the UI is implemented by JavaFX, required Java 8 version.
 
 ## Usage
 
