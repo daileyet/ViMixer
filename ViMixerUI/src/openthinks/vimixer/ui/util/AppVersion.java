@@ -32,7 +32,7 @@ import java.lang.annotation.Target;
 
 /**
  * @author dailey.yet@outlook.com
- *
+ * @since v1.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

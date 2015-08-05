@@ -4,14 +4,6 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import openthinks.vimixer.ui.controller.biz.ProcessMixBizThread;
-import openthinks.vimixer.ui.controller.biz.figure.DynamicPaintType;
-import openthinks.vimixer.ui.controller.biz.figure.FigureOverviewPool;
-import openthinks.vimixer.ui.controller.biz.figure.block.BlocksView;
-import openthinks.vimixer.ui.model.ViFile;
-import openthinks.vimixer.ui.model.ViFileInfo;
-import openthinks.vimixer.ui.model.ViFileStatus;
-import openthinks.vimixer.ui.model.ViFileSupportType;
 import javafx.beans.binding.DoubleBinding;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -27,7 +19,20 @@ import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.FlowPane;
+import openthinks.vimixer.ui.controller.biz.ProcessMixBizThread;
+import openthinks.vimixer.ui.controller.biz.figure.DynamicPaintType;
+import openthinks.vimixer.ui.controller.biz.figure.FigureOverviewPool;
+import openthinks.vimixer.ui.controller.biz.figure.block.BlocksView;
+import openthinks.vimixer.ui.model.ViFile;
+import openthinks.vimixer.ui.model.ViFileInfo;
+import openthinks.vimixer.ui.model.ViFileStatus;
+import openthinks.vimixer.ui.model.ViFileSupportType;
 
+/**
+ * The main window UI controller
+ * @author dailey.yet@outlook.com
+ * @since v1.0
+ */
 public class MainFrameController extends BaseController {
 
 	@FXML

@@ -5,7 +5,7 @@ import openthinks.vimixer.ui.model.ViFileInfo;
 /**
  * Dynamic change interface for {@link FigureOverview}
  * @author minjdai
- *
+ * @since v1.0
  */
 public interface Dynamically {
 

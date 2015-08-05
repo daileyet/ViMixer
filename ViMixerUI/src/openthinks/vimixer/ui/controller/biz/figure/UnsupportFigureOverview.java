@@ -5,7 +5,7 @@ package openthinks.vimixer.ui.controller.biz.figure;
 
 /**
  * @author minjdai
- *
+ * @since v1.0
  */
 public class UnsupportFigureOverview extends RuntimeException {
 

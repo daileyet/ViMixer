@@ -1,17 +1,17 @@
 package openthinks.vimixer.ui.controller.biz.figure.progress;
 
+import javafx.application.Platform;
 import openthinks.vimixer.ui.controller.biz.figure.DynamicPaintType;
 import openthinks.vimixer.ui.controller.biz.figure.FigureOverview;
 import openthinks.vimixer.ui.controller.biz.figure.FigureOverviewPool;
 import openthinks.vimixer.ui.model.ViFile;
 import openthinks.vimixer.ui.model.ViFileInfo;
-import javafx.application.Platform;
 
 /**
  * Show progress overview and dynamic figure progress mixed process
  * 
  * @author minjdai
- *
+ * @since v1.0
  */
 public class ProgressOverViewFigure extends FigureOverview<ProgressView> {
 
@@ -55,7 +55,7 @@ public class ProgressOverViewFigure extends FigureOverview<ProgressView> {
 	/**
 	 * static block to register mapping
 	 */
-	static{
+	static {
 		FigureOverviewPool.logFigureClass(ProgressOverViewFigure.class, ProgressView.class);
 	}
 }

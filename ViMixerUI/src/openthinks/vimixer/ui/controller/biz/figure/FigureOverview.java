@@ -1,14 +1,14 @@
 package openthinks.vimixer.ui.controller.biz.figure;
 
-import openthinks.vimixer.ui.controller.BaseController;
-import openthinks.vimixer.ui.model.ViFile;
 import javafx.application.Platform;
 import javafx.scene.layout.Pane;
+import openthinks.vimixer.ui.controller.BaseController;
+import openthinks.vimixer.ui.model.ViFile;
 
 /**
- * 
+ * The overview for the figure-able component which reference one {@link ViFile}
  * @author Dailey
- *
+ * @since v1.0
  * @param <T> {@link Figureable}
  */
 public abstract class FigureOverview<T extends Figureable> implements Dynamically {
@@ -21,8 +21,8 @@ public abstract class FigureOverview<T extends Figureable> implements Dynamicall
 	@SuppressWarnings("unchecked")
 	public FigureOverview(ViFile observableItem) {
 		this.observable = observableItem;
-		this.figureView =  (T) FigureOverviewPool.lookup(observableItem,
-				 (Class<? extends FigureOverview<T>>) getClass());
+		this.figureView = (T) FigureOverviewPool
+				.lookup(observableItem, (Class<? extends FigureOverview<T>>) getClass());
 	}
 
 	/**

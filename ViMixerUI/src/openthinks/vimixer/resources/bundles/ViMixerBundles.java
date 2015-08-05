@@ -2,6 +2,11 @@ package openthinks.vimixer.resources.bundles;
 
 import openthinks.libs.i18n.implement.bundle.IBundleMessageType;
 
+/**
+ * Localization bundle type, include three type message: UI,MODEL,LOG
+ * @author dailey.yet@outlook.com
+ * @since v1.0
+ */
 public enum ViMixerBundles implements IBundleMessageType {
 	UI, LOG, MODEL;
 

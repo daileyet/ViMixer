@@ -25,8 +25,9 @@
 package openthinks.vimixer.ui.util;
 
 /**
+ * Version {@link AppVersion} getter helper 
  * @author dailey.yet@outlook.com
- *
+ * @since v1.0
  */
 public final class VersionGetter {
 	public final static VersionGetter valueOf(Class<?> appClz) {

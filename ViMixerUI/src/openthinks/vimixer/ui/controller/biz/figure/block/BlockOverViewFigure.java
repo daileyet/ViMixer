@@ -1,19 +1,19 @@
 package openthinks.vimixer.ui.controller.biz.figure.block;
 
+import javafx.application.Platform;
+import javafx.scene.Node;
+import javafx.scene.shape.Shape;
 import openthinks.crypto.mix.MixBlock;
 import openthinks.vimixer.ui.controller.biz.figure.DynamicPaintType;
 import openthinks.vimixer.ui.controller.biz.figure.FigureOverview;
 import openthinks.vimixer.ui.controller.biz.figure.FigureOverviewPool;
 import openthinks.vimixer.ui.model.ViFile;
 import openthinks.vimixer.ui.model.ViFileInfo;
-import javafx.application.Platform;
-import javafx.scene.Node;
-import javafx.scene.shape.Shape;
 
 /**
  * Show blocks overview and dynamic figure blocks mixed process
  * @author minjdai
- *
+ * @since v1.0
  */
 public class BlockOverViewFigure extends FigureOverview<BlocksView> {
 	public BlockOverViewFigure(ViFile observableItem) {
@@ -62,10 +62,11 @@ public class BlockOverViewFigure extends FigureOverview<BlocksView> {
 		});
 
 	}
+
 	/**
 	 * static block to register mapping
 	 */
-	static{
+	static {
 		FigureOverviewPool.logFigureClass(BlockOverViewFigure.class, BlocksView.class);
 	}
 }

@@ -1,7 +1,13 @@
+/**
+ * Business package
+ */
 package openthinks.vimixer.ui.controller.biz;
 
 import java.util.Date;
 
+import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import openthinks.crypto.mix.MixBlock;
 import openthinks.crypto.mix.MixTarget;
 import openthinks.crypto.mix.Mixer;
@@ -16,15 +22,12 @@ import openthinks.vimixer.ui.controller.biz.figure.DynamicPaintType;
 import openthinks.vimixer.ui.model.ViFile;
 import openthinks.vimixer.ui.model.ViFileStatus;
 import openthinks.vimixer.ui.model.configure.Segmentor;
-import javafx.collections.ObservableList;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 
 /**
- * a new thread to process mixing file, when start run button clicked
- * 
+ * a new thread to process mixing file, when start run button clicked<BR>
+ * it will invoke the business code to mixer files
  * @author minjdai
- *
+ * @since v1.0
  */
 public class ProcessMixBizThread extends Thread {
 	private final ObservableList<ViFile> viFiles;

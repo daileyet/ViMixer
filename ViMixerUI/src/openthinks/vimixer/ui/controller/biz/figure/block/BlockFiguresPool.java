@@ -3,18 +3,19 @@ package openthinks.vimixer.ui.controller.biz.figure.block;
 import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import openthinks.vimixer.ui.controller.biz.figure.FigureOverview;
-import openthinks.vimixer.ui.model.ViFile;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
+import openthinks.vimixer.ui.controller.biz.figure.FigureOverviewPool;
+import openthinks.vimixer.ui.model.ViFile;
 
 /**
  * {@link BlocksView} cache pool and request queue
  * @deprecated
- * @see FigureOverview
+ * @see FigureOverviewPool
  * @author minjdai
- *
+ * @since v1.0
  */
+@Deprecated
 public final class BlockFiguresPool {
 	private final static ObservableMap<ViFile, BlocksView> caches = FXCollections.observableHashMap();
 	private static BlockOverViewFigure currentFigure;

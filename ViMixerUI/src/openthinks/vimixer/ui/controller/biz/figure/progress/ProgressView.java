@@ -4,21 +4,21 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import openthinks.vimixer.ui.controller.BaseController;
-import openthinks.vimixer.ui.controller.MainFrameController;
-import openthinks.vimixer.ui.controller.biz.figure.Figureable;
-import openthinks.vimixer.ui.model.ViFile;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import openthinks.vimixer.ui.controller.BaseController;
+import openthinks.vimixer.ui.controller.MainFrameController;
+import openthinks.vimixer.ui.controller.biz.figure.Figureable;
+import openthinks.vimixer.ui.model.ViFile;
 
 /**
  * The view include progress bar and label
  * @author Dailey
- *
+ * @since v1.0
  */
 public class ProgressView extends HBox implements Figureable {
 	private ProgressBar progressBar;
@@ -26,10 +26,12 @@ public class ProgressView extends HBox implements Figureable {
 	private AtomicBoolean initailized = new AtomicBoolean(false);
 	private Lock lock = new ReentrantLock();
 
+	@Override
 	public boolean isInitialized() {
 		return initailized.get();
 	}
 
+	@Override
 	public void initial(ViFile observable, BaseController controller) {
 		lock.lock();
 		try {

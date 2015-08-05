@@ -8,13 +8,13 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import openthinks.vimixer.ui.model.ViFile;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
+import openthinks.vimixer.ui.model.ViFile;
 
 /**
- * {@link Figureable} cache pool and request queue
- * 
+ * {@link FigureOverview} cache pool and request queue
+ * @since v1.0
  * @author minjdai
  */
 public class FigureOverviewPool {
@@ -130,9 +130,9 @@ public class FigureOverviewPool {
 	 */
 	private static Figureable figureableOf(Class<? extends FigureOverview<? extends Figureable>> figureOverviewClz) {
 		Figureable figureable = null;
-		
+
 		Class<? extends Figureable> figureableClazz = figureClazzMap.get(figureOverviewClz);
-		if(figureableClazz==null){
+		if (figureableClazz == null) {
 			throw new UnsupportFigureOverview("Not suuport this class type:" + figureOverviewClz);
 		}
 		try {
@@ -149,16 +149,16 @@ public class FigureOverviewPool {
 	private static final ObservableMap<Class<? extends FigureOverview<? extends Figureable>>, Class<? extends Figureable>> figureClazzMap = FXCollections
 			.observableHashMap();
 	private static final Lock lock = new ReentrantLock();
+
 	public static final void logFigureClass(Class<? extends FigureOverview<? extends Figureable>> figureOverviewClazz,
 			Class<? extends Figureable> figureableClazz) {
 		lock.lock();
-		try{
-		if (figureClazzMap.containsKey(figureOverviewClazz))
-			;
-		else
-			figureClazzMap.put((Class<? extends FigureOverview<? extends Figureable>>) figureOverviewClazz,
-					figureableClazz);
-		}finally{
+		try {
+			if (figureClazzMap.containsKey(figureOverviewClazz))
+				;
+			else
+				figureClazzMap.put(figureOverviewClazz, figureableClazz);
+		} finally {
 			lock.unlock();
 		}
 	}

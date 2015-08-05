@@ -8,6 +8,14 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableMap;
+import javafx.scene.Node;
+import javafx.scene.control.Tooltip;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 import openthinks.crypto.mix.MixBlock;
 import openthinks.crypto.mix.MixBlocks;
 import openthinks.crypto.mix.MixTarget;
@@ -22,22 +30,14 @@ import openthinks.vimixer.ui.controller.biz.figure.DynamicPaintType;
 import openthinks.vimixer.ui.controller.biz.figure.Figureable;
 import openthinks.vimixer.ui.model.ViFile;
 import openthinks.vimixer.ui.model.configure.Segmentor;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableMap;
-import javafx.scene.Node;
-import javafx.scene.control.Tooltip;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
 
 /**
  * graphic for one {@link ViFile} blocks view, render and process
  * 
  * @author minjdai
- *
+ * @since v1.0
  */
-public class BlocksView extends FlowPane implements Figureable,Observer {
+public class BlocksView extends FlowPane implements Figureable, Observer {
 	private int block_width = 10, block_height = 10;
 	private int block_arc_width = 3, block_arc_height = 3;
 	private AtomicBoolean initailized = new AtomicBoolean(false);
@@ -45,16 +45,19 @@ public class BlocksView extends FlowPane implements Figureable,Observer {
 	private Lock lock = new ReentrantLock();
 	// store the  mapping between block unit in file and block unit in UI
 	private ObservableMap<MixBlock, Shape> map = FXCollections.observableHashMap();
-	
+
 	public BlocksView() {
 		I18nApplicationLocale.getInstance().addObserver(this);
 	}
-	
+
+	@Override
 	public boolean isInitialized() {
 		return initailized.get();
 	}
-	
+
 	private Rectangle lastAccessed;
+
+	@Override
 	public void initial(ViFile observable, BaseController controller) {
 		lock.lock();
 		try {
@@ -63,18 +66,18 @@ public class BlocksView extends FlowPane implements Figureable,Observer {
 			Segmentor segmentor = controller.configure().getSegmentor();
 			MixTarget mixTarget = new MixFile(observable.getFile(), segmentor.mixSegmentor());
 			MixBlocks mixBlocks = mixTarget.blocks();
-			for (MixBlock mixBlock:mixBlocks) {
+			for (MixBlock mixBlock : mixBlocks) {
 				Rectangle ret = new Rectangle(block_width, block_height, paintType.color());
 				ret.setArcWidth(block_arc_width);
 				ret.setArcHeight(block_arc_height);
 				ret.setOpacity(.8);
 				ret.setUserData(mixBlock.getSegment());
-				ret.setOnMouseClicked((event)->{
-					Rectangle source = ((Rectangle)event.getSource());
-					if(source==lastAccessed){//ignore selected same block
+				ret.setOnMouseClicked((event) -> {
+					Rectangle source = ((Rectangle) event.getSource());
+					if (source == lastAccessed) {//ignore selected same block
 						return;
 					}
-					if(lastAccessed!=null){
+					if (lastAccessed != null) {
 						lastAccessed.setFill(observable.getStatus().paintType().color());
 						Tooltip.uninstall(lastAccessed, tooltip);
 					}
@@ -84,7 +87,7 @@ public class BlocksView extends FlowPane implements Figureable,Observer {
 					setToolTipText(segment);
 					Tooltip.install(lastAccessed, tooltip);
 				});
-				
+
 				this.getChildren().add(ret);
 				map.put(mixBlock, ret);
 			}
@@ -101,7 +104,8 @@ public class BlocksView extends FlowPane implements Figureable,Observer {
 	 * @param segment
 	 */
 	private void setToolTipText(Segment segment) {
-		String tip = I18n.getMessage(ViMixerBundles.UI, "tooltip.block.segment", segment.getPosition(),segment.getLength());
+		String tip = I18n.getMessage(ViMixerBundles.UI, "tooltip.block.segment", segment.getPosition(),
+				segment.getLength());
 		tooltip.setText(tip);
 	}
 
@@ -188,7 +192,7 @@ public class BlocksView extends FlowPane implements Figureable,Observer {
 	 */
 	@Override
 	public void update(Observable o, Object newloacle) {
-		if(lastAccessed!=null){
+		if (lastAccessed != null) {
 			Segment segment = (Segment) lastAccessed.getUserData();
 			setToolTipText(segment);
 		}

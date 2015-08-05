@@ -4,16 +4,6 @@ import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
-import openthinks.libs.i18n.I18n;
-import openthinks.libs.i18n.I18nApplicationLocale;
-import openthinks.vimixer.resources.ResourceLoader;
-import openthinks.vimixer.resources.bundles.ViMixerBundles;
-import openthinks.vimixer.ui.controller.ConfigurePaneController;
-import openthinks.vimixer.ui.controller.MainFrameController;
-import openthinks.vimixer.ui.controller.RootLayoutController;
-import openthinks.vimixer.ui.model.ViFile;
-import openthinks.vimixer.ui.model.configure.ViMixerConfigure;
-import openthinks.vimixer.ui.util.AppVersion;
 import javafx.application.Application;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -25,11 +15,21 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import openthinks.libs.i18n.I18n;
+import openthinks.libs.i18n.I18nApplicationLocale;
+import openthinks.vimixer.resources.ResourceLoader;
+import openthinks.vimixer.resources.bundles.ViMixerBundles;
+import openthinks.vimixer.ui.controller.ConfigurePaneController;
+import openthinks.vimixer.ui.controller.MainFrameController;
+import openthinks.vimixer.ui.controller.RootLayoutController;
+import openthinks.vimixer.ui.model.ViFile;
+import openthinks.vimixer.ui.model.configure.ViMixerConfigure;
+import openthinks.vimixer.ui.util.AppVersion;
 
 /**
- * 
+ * The main start entry for this application
  * @author minjdai
- *
+ * @since v1.0
  */
 @AppVersion("1.0")
 public class ViMixerApp extends Application implements Observer {
@@ -111,6 +111,11 @@ public class ViMixerApp extends Application implements Observer {
 		launch(args);
 	}
 
+	/**
+	 * Wrapped data which will be passed between each window
+	 * @author dailey.yet@outlook.com
+	 * @since v1.0
+	 */
 	public static class TransferData {
 		private final Application application;
 
@@ -150,6 +155,9 @@ public class ViMixerApp extends Application implements Observer {
 		showMainFrame();
 	}
 
+	/**
+	 * reload for localization message
+	 */
 	@Override
 	public void update(Observable o, Object newloace) {
 		transfer.stage().setTitle(I18n.getMessage(ViMixerBundles.UI, "app.title"));

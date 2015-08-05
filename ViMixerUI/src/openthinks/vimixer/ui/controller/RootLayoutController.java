@@ -6,13 +6,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import openthinks.libs.i18n.I18n;
-import openthinks.libs.i18n.I18nApplicationLocale;
-import openthinks.vimixer.ViMixerApp;
-import openthinks.vimixer.resources.bundles.ViMixerBundles;
-import openthinks.vimixer.ui.model.ViFile;
-import openthinks.vimixer.ui.model.ViFileSupportType;
-import openthinks.vimixer.ui.util.VersionGetter;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -21,7 +14,19 @@ import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.RadioMenuItem;
 import javafx.stage.FileChooser;
+import openthinks.libs.i18n.I18n;
+import openthinks.libs.i18n.I18nApplicationLocale;
+import openthinks.vimixer.ViMixerApp;
+import openthinks.vimixer.resources.bundles.ViMixerBundles;
+import openthinks.vimixer.ui.model.ViFile;
+import openthinks.vimixer.ui.model.ViFileSupportType;
+import openthinks.vimixer.ui.util.VersionGetter;
 
+/**
+ * The root container panel controller
+ * @author dailey.yet@outlook.com
+ * @since v1.0
+ */
 public class RootLayoutController extends BaseController {
 
 	@FXML

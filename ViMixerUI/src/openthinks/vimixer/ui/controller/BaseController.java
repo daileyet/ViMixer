@@ -29,10 +29,9 @@ import openthinks.vimixer.ui.model.ViFile;
 import openthinks.vimixer.ui.model.configure.ViMixerConfigure;
 
 /**
- * Base controller
- * 
+ * Base controller for common method and attribute
  * @author minjdai
- *
+ * @since v1.0
  */
 public abstract class BaseController implements Initializable, Observer {
 	private static final String PREF_FILE = "filePath";

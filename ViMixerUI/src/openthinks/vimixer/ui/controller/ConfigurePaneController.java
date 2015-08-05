@@ -3,6 +3,12 @@ package openthinks.vimixer.ui.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import openthinks.vimixer.ui.model.configure.Segmentor;
 import openthinks.vimixer.ui.model.configure.SegmentorType;
 import openthinks.vimixer.ui.model.configure.SimpleLinearSegmentor;
@@ -10,13 +16,12 @@ import openthinks.vimixer.ui.model.configure.SmartLinearSegmentor;
 import openthinks.vimixer.ui.model.configure.ViMixerConfigure;
 import openthinks.vimixer.ui.util.MD5;
 import openthinks.vimixer.ui.util.NumberStringConverter;
-import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
 
+/**
+ * The configure pane UI controller
+ * @author dailey.yet@outlook.com
+ * @since v1.0
+ */
 public class ConfigurePaneController extends BaseController {
 	@FXML
 	private TextField nameField;

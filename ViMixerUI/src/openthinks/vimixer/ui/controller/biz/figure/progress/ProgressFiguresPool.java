@@ -3,17 +3,18 @@ package openthinks.vimixer.ui.controller.biz.figure.progress;
 import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import openthinks.vimixer.ui.controller.biz.figure.FigureOverview;
-import openthinks.vimixer.ui.model.ViFile;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
+import openthinks.vimixer.ui.controller.biz.figure.FigureOverviewPool;
+import openthinks.vimixer.ui.model.ViFile;
 
 /**
  * @deprecated
- * @see FigureOverview
+ * @see FigureOverviewPool
  * @author Dailey
- *
+ * @since v1.0
  */
+@Deprecated
 public class ProgressFiguresPool {
 	private final static ObservableMap<ViFile, ProgressView> caches = FXCollections.observableHashMap();
 	private static ProgressOverViewFigure currentFigure;
