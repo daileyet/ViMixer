@@ -14,20 +14,16 @@ import java.util.concurrent.Future;
 /**
  * The template class to implement {@link Mixer}
  * @author minjdai
- *
+ * @since v1.0
  */
 public abstract class AbstractMixer implements Mixer {
 
 	protected abstract MixTarget getMixTarget();
-	
+
 	protected abstract MixStrategy getMixStrategy();
-	
+
 	protected abstract MixProcesser getMixProcesser();
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see example.crypto.Mixer#mix()
-	 */
+
 	@Override
 	public void mix() throws InterruptedException {
 		MixTarget mixTarget = this.getMixTarget();
@@ -35,10 +31,9 @@ public abstract class AbstractMixer implements Mixer {
 		MixProcesser mixProcesser = this.getMixProcesser();
 		mixTarget.initial();
 		final ExecutorService executorService =
-				//Executors.newCachedThreadPool();
-				Executors.newFixedThreadPool(100);
-		final CompletionService<MixBlock> competeService = new ExecutorCompletionService<MixBlock>(
-				executorService);
+		//Executors.newCachedThreadPool();
+		Executors.newFixedThreadPool(100);
+		final CompletionService<MixBlock> competeService = new ExecutorCompletionService<MixBlock>(executorService);
 		mixProcesser.start();
 		MixBlocks blocks = mixTarget.blocks();
 		for (MixBlock mixBlock : blocks) {

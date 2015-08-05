@@ -1,8 +1,9 @@
 package openthinks.crypto.mix;
+
 /**
  * The progress of doing mixing, it will track the action and status of {@link Mixer}
  * @author minjdai
- *
+ * @since v1.0
  */
 public interface MixProcesser {
 

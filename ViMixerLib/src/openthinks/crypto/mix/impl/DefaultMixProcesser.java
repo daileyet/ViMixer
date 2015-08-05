@@ -5,6 +5,11 @@ import java.util.Date;
 import openthinks.crypto.mix.MixBlock;
 import openthinks.crypto.mix.MixProcesser;
 
+/**
+ * The default mix processer
+ * @author dailey.yet@outlook.com
+ * @since v1.0
+ */
 public class DefaultMixProcesser implements MixProcesser {
 	public final static MixProcesser get() {
 		return new DefaultMixProcesser();
@@ -26,12 +31,12 @@ public class DefaultMixProcesser implements MixProcesser {
 	@Override
 	public void completed() {
 		completeTime = new Date().getTime();
-		System.out.println("Cost time:"+cost());
+		System.out.println("Cost time:" + cost());
 	}
 
 	@Override
 	public long cost() {
-		return this.completeTime-this.startTime;
+		return this.completeTime - this.startTime;
 	}
 
 }

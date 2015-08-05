@@ -1,8 +1,9 @@
 package openthinks.crypto.mix;
+
 /**
  * The generator for which {@link Segment} of {@link MixTarget} need to do mixing.
  * @author minjdai
- *
+ * @since v1.0
  */
 public interface MixSegmentor {
 

@@ -4,7 +4,7 @@ package openthinks.crypto.mix;
  * The block in {@link MixTarget} need to do mixing. Wrapper {@link Segment}
  * 
  * @author minjdai
- *
+ * @since v1.0
  */
 public abstract class MixBlock {
 	protected Segment segment;
@@ -23,11 +23,11 @@ public abstract class MixBlock {
 	public String toString() {
 		return "MixBlock [segment=" + segment + "]";
 	}
-	
-	public void markProcessed(){
+
+	public void markProcessed() {
 		setStatus(MixBlockStatus.PROCESSED);
 	}
-	
+
 	/**
 	 * reference its owner {@link MixTarget}
 	 * 
@@ -106,6 +106,5 @@ public abstract class MixBlock {
 			return false;
 		return true;
 	}
-	
-	
+
 }

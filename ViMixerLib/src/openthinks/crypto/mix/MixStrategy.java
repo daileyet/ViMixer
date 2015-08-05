@@ -1,8 +1,9 @@
 package openthinks.crypto.mix;
+
 /**
  * The strategy of how to do the mixing
  * @author minjdai
- *
+ * @since v1.0
  */
 public interface MixStrategy {
 

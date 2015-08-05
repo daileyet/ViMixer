@@ -1,9 +1,10 @@
 package openthinks.crypto.mix;
+
 /**
  * The target which need to do mixing.
  * It can be file,text string
  * @author minjdai
- *
+ * @since v1.0
  */
 public interface MixTarget {
 
@@ -17,7 +18,7 @@ public interface MixTarget {
 	 * do some initial actions, prepare target
 	 */
 	void initial();
-	
+
 	/**
 	 * do some clear actions, release target
 	 */

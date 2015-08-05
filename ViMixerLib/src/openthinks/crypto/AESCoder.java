@@ -14,7 +14,7 @@ import javax.crypto.spec.SecretKeySpec;
  * mode:	ECB/CBC/PCBC/CTR/CTS/CFB/CFB8 to CFB128/OFB/OBF8 to OFB128<br/>
  * padding:	Nopadding/PKCS5Padding/ISO10126Padding/
  * @author Aub
- * 
+ * @since v1.0
  */
 public class AESCoder {
 
@@ -38,7 +38,6 @@ public class AESCoder {
 	}
 
 	protected static Key toKey(byte[] key) {
-		//������Կ
 		return new SecretKeySpec(key, KEY_ALGORITHM);
 	}
 

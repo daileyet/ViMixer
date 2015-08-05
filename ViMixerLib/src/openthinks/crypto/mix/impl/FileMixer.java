@@ -11,16 +11,16 @@ import openthinks.crypto.mix.MixStrategy;
 import openthinks.crypto.mix.MixTarget;
 
 /**
+ * File mixer
  * @author minjdai
- *
+ * @since v1.0
  */
 public class FileMixer extends AbstractMixer {
 	private MixTarget mixFile;
 	private MixStrategy mixStrategy;
 	private MixProcesser mixProcesser;
-	
-	public FileMixer(MixTarget mixFile, MixStrategy mixStrategy,
-			MixProcesser mixProcesser) {
+
+	public FileMixer(MixTarget mixFile, MixStrategy mixStrategy, MixProcesser mixProcesser) {
 		super();
 		this.mixFile = mixFile;
 		this.mixStrategy = mixStrategy;
@@ -28,15 +28,15 @@ public class FileMixer extends AbstractMixer {
 	}
 
 	public FileMixer(MixTarget mixFile, MixStrategy mixStrategy) {
-		this(mixFile,mixStrategy,DefaultMixProcesser.get());
-	}
-	
-	public FileMixer(File file, MixStrategy mixStrategy) {
-		this(new MixFile(file),mixStrategy,DefaultMixProcesser.get());
+		this(mixFile, mixStrategy, DefaultMixProcesser.get());
 	}
 
-	public FileMixer(File file,String key){
-		this(new MixFile(file),DefaultMixStrategy.get(key),DefaultMixProcesser.get());
+	public FileMixer(File file, MixStrategy mixStrategy) {
+		this(new MixFile(file), mixStrategy, DefaultMixProcesser.get());
+	}
+
+	public FileMixer(File file, String key) {
+		this(new MixFile(file), DefaultMixStrategy.get(key), DefaultMixProcesser.get());
 	}
 
 	@Override
@@ -53,5 +53,5 @@ public class FileMixer extends AbstractMixer {
 	protected MixProcesser getMixProcesser() {
 		return mixProcesser;
 	}
-	
+
 }
