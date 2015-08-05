@@ -2,8 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_45"/>
-	<classpathentry kind="lib" path="lib/openlibs.i18n.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ViMixerLib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/openlibs.i18n-v1.0.jar"/>
+	<classpathentry kind="lib" path="lib/openlibs.utilities-v1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
