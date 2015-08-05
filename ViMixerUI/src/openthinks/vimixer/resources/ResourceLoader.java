@@ -18,11 +18,11 @@ public class ResourceLoader {
 
 	static {
 		// UI layout FXML
-		FXML_ROOTLAYOUT = ResourceLoader.class.getResource("/xyz/openthinks/vimixer/ui/view/RootLayout.fxml");
-		FXML_MAINFRAME = ResourceLoader.class.getResource("/xyz/openthinks/vimixer/ui/view/MainFrame.fxml");
-		FXML_CONFIGUREPANE = ResourceLoader.class.getResource("/xyz/openthinks/vimixer/ui/view/ConfigurePane.fxml");
+		FXML_ROOTLAYOUT = ResourceLoader.class.getResource("/openthinks/vimixer/ui/view/RootLayout.fxml");
+		FXML_MAINFRAME = ResourceLoader.class.getResource("/openthinks/vimixer/ui/view/MainFrame.fxml");
+		FXML_CONFIGUREPANE = ResourceLoader.class.getResource("/openthinks/vimixer/ui/view/ConfigurePane.fxml");
 		// app icon and css style
-		CSS_APP = ResourceLoader.class.getResource("/xyz/openthinks/vimixer/ui/view/application.css");
+		CSS_APP = ResourceLoader.class.getResource("/openthinks/vimixer/ui/view/application.css");
 		APP_ICON = new Image(ResourceLoader.class.getResourceAsStream("vimixer_4.png"));
 
 	}

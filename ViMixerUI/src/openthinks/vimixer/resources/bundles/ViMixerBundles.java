@@ -41,6 +41,6 @@ public enum ViMixerBundles implements IBundleMessageType {
 		return packType;
 	}
 
-	public static final String BASE_PACK_DIR = "xyz/openthinks/vimixer/resources/bundles/";
+	public static final String BASE_PACK_DIR = "openthinks/vimixer/resources/bundles/";
 
 }
