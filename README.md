@@ -49,13 +49,13 @@ So, it is used when you need keep your file higher security.
 ![localization][11]
 
  [1]: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
- [2]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap01.png
- [3]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap02.png
- [4]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap03.png
- [5]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap04.png
- [6]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap05.png
- [7]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap06.png
- [8]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap07.png
- [9]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap08.png
- [10]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap09.png
- [11]: https://github.com/daileyet/ViMixer/blob/master/screenshots/Snap10.png
+ [2]: http://daileyet.github.io/ViMixer/images/Snap01.jpg
+ [3]: http://daileyet.github.io/ViMixer/images/Snap02.jpg
+ [4]: http://daileyet.github.io/ViMixer/images/Snap03.jpg
+ [5]: http://daileyet.github.io/ViMixer/images/Snap04.jpg
+ [6]: http://daileyet.github.io/ViMixer/images/Snap05.jpg
+ [7]: http://daileyet.github.io/ViMixer/images/Snap06.jpg
+ [8]: http://daileyet.github.io/ViMixer/images/Snap07.jpg
+ [9]: http://daileyet.github.io/ViMixer/images/Snap08.jpg
+ [10]: http://daileyet.github.io/ViMixer/images/Snap09.jpg
+ [11]: http://daileyet.github.io/ViMixer/images/Snap10.jpg
