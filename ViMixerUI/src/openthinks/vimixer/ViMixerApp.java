@@ -24,14 +24,12 @@ import openthinks.vimixer.ui.controller.MainFrameController;
 import openthinks.vimixer.ui.controller.RootLayoutController;
 import openthinks.vimixer.ui.model.ViFile;
 import openthinks.vimixer.ui.model.configure.ViMixerConfigure;
-import openthinks.vimixer.ui.util.AppVersion;
 
 /**
  * The main start entry for this application
  * @author minjdai
  * @since v1.0
  */
-@AppVersion("1.0")
 public class ViMixerApp extends Application implements Observer {
 
 	private BorderPane rootLayout;

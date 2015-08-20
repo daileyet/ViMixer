@@ -16,26 +16,23 @@
  * specific language governing permissions and limitations
  * under the License.
  *
-* @Title: AppVersion.java 
-* @Package xyz.openthinks.vimixer.ui.util 
-* @Description: AppVersion
+* @Title: Versions.java 
+* @Description: TODO
 * @author dailey.yet@outlook.com  
-* @date 2015/7/22
+* @date Aug 20, 2015
 * @version V1.0   
 */
-package openthinks.vimixer.ui.util;
+package openthinks.vimixer;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import openthinks.libs.utilities.version.AppVersion;
+import openthinks.libs.utilities.version.VersionCenter;
 
 /**
+ * openthinks.vimixer version class
  * @author dailey.yet@outlook.com
- * @since v1.0
+ *
  */
-@Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-public @interface AppVersion {
-	String value() default "1.0";
+@AppVersion("1.0")
+public class Versions extends VersionCenter {
+
 }

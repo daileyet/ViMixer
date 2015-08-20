@@ -16,11 +16,11 @@ import javafx.scene.control.RadioMenuItem;
 import javafx.stage.FileChooser;
 import openthinks.libs.i18n.I18n;
 import openthinks.libs.i18n.I18nApplicationLocale;
+import openthinks.vimixer.Versions;
 import openthinks.vimixer.ViMixerApp;
 import openthinks.vimixer.resources.bundles.ViMixerBundles;
 import openthinks.vimixer.ui.model.ViFile;
 import openthinks.vimixer.ui.model.ViFileSupportType;
-import openthinks.vimixer.ui.util.VersionGetter;
 
 /**
  * The root container panel controller
@@ -117,9 +117,9 @@ public class RootLayoutController extends BaseController {
 	private void handAbout() {
 		String buttonText = I18n.getMessage(ViMixerBundles.UI, "about.alert.button.ok");
 		ButtonType customerButton = new ButtonType(buttonText, ButtonData.OK_DONE);//overrider its default button
-		String version = VersionGetter.valueOf(ViMixerApp.class).get();
+		String version = new Versions().get();
 		String alertContent = I18n.getMessage(ViMixerBundles.UI, "about.alert.content", version, "Dailey Dai",
-				"http://openthinks.xyz");
+				"http://openthinks.com");
 		Alert alert = new Alert(AlertType.INFORMATION, alertContent, customerButton);
 		alert.setTitle(getBundleMessage("app.title"));
 		alert.setHeaderText(getBundleMessage("about.alert.header"));
