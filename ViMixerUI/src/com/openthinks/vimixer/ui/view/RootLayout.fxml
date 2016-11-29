@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.openthinks.vimixer.ui.controller.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="%menu.file">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handAddAction" text="%menuitem.add" />
+              <MenuItem mnemonicParsing="false" onAction="#handQuitAction" text="%menuitem.quit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="%menu.configure">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handViewCurrent" text="%menuitem.view" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handSaveConfigure" text="%menuitem.save" />
+                  <MenuItem mnemonicParsing="false" onAction="#handSaveAsConfigure" text="%menuitem.saveas" />
+              <MenuItem mnemonicParsing="false" onAction="#handLoadConfigure" text="%menuitem.load" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="%menu.locale">
+               <items>
+                  <RadioMenuItem fx:id="en_Menuitem" mnemonicParsing="false" onAction="#handLocaleChange" text="%menuitem.en">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="radio_locale_group" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="zh_Menuitem" mnemonicParsing="false" onAction="#handLocaleChange" text="%menuitem.zh" toggleGroup="$radio_locale_group" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="%menu.help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handAbout" text="%menuitem.about" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

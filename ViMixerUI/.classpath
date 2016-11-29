@@ -3,9 +3,9 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_51"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/openlibs.i18n-v1.0.jar"/>
-	<classpathentry kind="lib" path="lib/openlibs.utilities-v1.0.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ViMixerLib"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/openlibs.utilities"/>
+	<classpathentry kind="lib" path="lib/i18n-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/utilities-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

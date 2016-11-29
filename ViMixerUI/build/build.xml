@@ -22,12 +22,12 @@
 	
 		<copy todir="externalLibs">
 			<fileset dir="R:\MyGit\ViMixer\ViMixerUI\lib">
-				<filename name="openlibs.i18n-v1.0.jar"/>
+				<filename name="i18n-2.0.jar"/>
 			</fileset>
 		</copy>
 		<copy todir="externalLibs">
 			<fileset dir="R:\MyGit\ViMixer\ViMixerUI\lib">
-				<filename name="openlibs.utilities-v1.0.jar"/>
+				<filename name="utilities-1.1.jar"/>
 			</fileset>
 		</copy>
 	
@@ -54,8 +54,8 @@
 		<!-- Copy project-libs references -->
 		<copy todir="build/libs">
 			<fileset dir="externalLibs">
-				<include name="openlibs.i18n-v1.0.jar"/>
-				<include name="openlibs.utilities-v1.0.jar"/>
+				<include name="i18n-2.0.jar"/>
+				<include name="utilities-1.1.jar"/>
 			</fileset>
 		</copy>
 	
@@ -116,7 +116,7 @@
 	
 		<fx:application id="fxApplication"
 			name="ViMixerApp"
-			mainClass="openthinks.vimixer.ViMixerApp"
+			mainClass="com.openthinks.vimixer.ViMixerApp"
 			toolkit="fx"
 			version="1.0"
 		/>
