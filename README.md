@@ -36,6 +36,14 @@ It will encrypt most of the file blocks, of course, we can configure it details.
 
 So, it is used when you need keep your file higher security.
 
+#### Encryption & Decryption
+
+After add need encrypted files(image/video), click start icon; it will do encryption one by one in file list.
+
+After add already encrypted files, click start icon; it will do decryption one by one in file list; 
+close the tool and open the file, check it.
+
+
 ### Screenshots
 ![start window][2]
 ![adding file][3]
